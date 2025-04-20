@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Public Speaking Trainer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>AI Public Speaking Trainer</h2>
+            <button id="themeToggle" aria-label="Switch to Dark Mode">🌙 Dark Mode</button>
+            <button id="helpButton" aria-label="Open help modal">Help</button>
+        </div>
+        <div id="topics">
+            <div class="topic" onclick="sendPredefinedMessage('How can I boost my confidence?')">Boost Confidence</div>
+            <div class="topic" onclick="sendPredefinedMessage('What are some tips for speech preparation?')">Speech Preparation</div>
+            <div class="topic" onclick="sendPredefinedMessage('How can I improve my delivery techniques?')">Delivery Techniques</div>
+            <div class="topic" onclick="sendPredefinedMessage('Analyze this speech for me.')">Analyze My Speech</div>
+        </div>
+        <div id="chatBody" class="chat-body" role="log" aria-live="polite">
+            <div class="message bot-message">
+                Hello! I'm your AI Public Speaking Trainer. How can I assist you today? (e.g., 'How can I boost my confidence?' or share text for analysis).
+            </div>
+        </div>
+        <div class="chat-footer">
+            <label for="userInput" class="sr-only">Enter your message</label>
+            <textarea id="userInput" rows="2" placeholder="Type your message here..."></textarea>
+            <button id="sendButton" class="send-button" aria-label="Send message">➤</button>
+        </div>
+    </div>
+    <div id="helpModal" class="modal">
+        <div class="modal-content">
+            <span class="close" aria-label="Close modal">×</span>
+            <p>Welcome to the AI Public Speaking Trainer!</p>
+            <p>- Type your questions or paste your speech in the input box below.</p>
+            <p>- Click the send button or press Enter to send.</p>
+            <p>- The bot will respond with tips, analysis, or answers related to public speaking.</p>
+            <p>- You can also use the topic buttons above to get started with common questions.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
